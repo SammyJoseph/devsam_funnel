@@ -1,162 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dev Sam</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Sam</title>
 
-	<!-- Tailwind -->
-	<script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-	<!-- Scroll reveal -->
-	<script src="https://unpkg.com/scrollreveal"></script>	
+    <!-- Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-	<link rel="stylesheet" href="assets/css/main.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
 </head>
+
 <body>
-	<!-- Hero title -->
-	<header>
-		<div class="pt-20 container mx-auto sm:grid lg:grid-cols-12 xl:grid-cols-2 px-4 lg:px-12">					
-			<!-- Columna 1 -->
-			<div class="scroll-reveal-fast text-white sm:col-span-1 lg:col-span-7 xl:col-span-1 text-center flex flex-col justify-end mb-4 md:mb-16">
-				<h2 class="text-xl text-pink-400">Sitios Web Profesionales</h2>
-				<h1 class="my-6 oswald-font">
-					<span class="inline-block text-4xl sm:text-6xl 2xl:text-7xl mb-2 capitalize">Tu página web</span><br>
-					<span class="inline-block text-4xl sm:text-6xl 2xl:text-7xl mb-2 capitalize">100% administrable</span><br>
-					<span class="inline-block text-5xl sm:text-7xl 2xl:text-8xl mb-2 uppercase mt-2">sin ningún pago</span><br>
-					<span class="flex justify-center text-6xl sm:text-8xl 2xl:text-9xl uppercase">
-						adelantado
-					</span>
-				</h1>
+    <!-- Hero title -->
+    <header>
+        <div class="pt-20 container mx-auto sm:grid lg:grid-cols-12 xl:grid-cols-2 px-4 lg:px-12">
+            <!-- Columna 1 -->
+            <div class="scroll-reveal-fast text-white sm:col-span-1 lg:col-span-7 xl:col-span-1 text-center flex flex-col justify-end mb-4 md:mb-16">
+                <h2 class="text-xl text-pink-400">Sitios Web Profesionales</h2>
+                <h1 class="my-6 oswald-font">
+                    <span class="inline-block text-4xl sm:text-6xl 2xl:text-7xl mb-2 capitalize">Tu página web</span><br>
+                    <span class="inline-block text-4xl sm:text-6xl 2xl:text-7xl mb-2 capitalize">100% administrable</span><br>
+                    <span class="inline-block text-5xl sm:text-7xl 2xl:text-8xl mb-2 uppercase mt-2">sin ningún pago</span><br>
+                    <span class="flex justify-center text-6xl sm:text-8xl 2xl:text-9xl uppercase">
+                        adelantado
+                    </span>
+                </h1>
+                <p class="text-pink-400 text-xl uppercase">Presentamos nuestro servicio postpago<br>totalmente libre de riesgos</p>
+                <p class="text-lg uppercase max-w-md mx-auto mt-2">Ahora puedes ver los resultados antes de realizar cualquier pago por nuestro servicio</p>
+            </div>
+            <!-- Columna 2 -->
+            <div class="scroll-reveal-slow lg:col-span-5 xl:col-span-1 lg:flex lg:items-end">
+                <div class="sm:-mb-12 flex justify-center max-w-xs mx-auto sm:max-w-none">
+                    <img class="sm:max-w-xl lg:max-w-full 2xl:max-w-2xl" src="assets/images/dev.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
 
-				<p class="text-pink-400 text-xl uppercase">Presentamos nuestro servicio postpago<br>totalmente libre de riesgos</p>
-				<p class="text-lg uppercase max-w-md mx-auto mt-2">Ahora puedes ver los resultados antes de realizar cualquier pago por nuestro servicio</p>
+    <!-- Formulario -->
+    <div class="container mt-8 sm:mt-12 text-center mx-auto">
+        <div class="sm:border sm:shadow mx-4 lg:mx-10 xl:mx-24 2xl:mx-6 sm:py-12 sm:px-4">
+            <p class="oswald-font text-2xl sm:text-4xl 2xl:text-5xl leading-normal sm:leading-snug lg:leading-relaxed 2xl:leading-tight uppercase font-bold text-gray-800">
+                Si estás listo para iniciar tu proyecto web, regístrate aquí y comienza <span class="underline underline-offset-4 xl:underline-offset-8 decoration-pink-500 decoration-4 md:decoration-8">hoy mismo</span> a tener presencia en internet
+            </p>
+            <form class="mt-5 sm:mt-12">
+                <div class="lg:flex">
+                    <input required class="shadow appearance-none border rounded w-full h-16 py-2 px-3 text-gray-700 text-xl leading-tight focus:outline-none focus:shadow-outline qsand-font" type="email" placeholder="Tu correo electrónico principal">
+                    <button type="submit" class="bg-pink-500 hover:bg-pink-700 w-full lg:w-64 h-16 mt-4 lg:mt-0 text-white font-bold py-2 px-4 rounded uppercase lg:ml-6 oswald-font text-xl">
+                        Iniciar ya
+                    </button>
+                </div>
+                <p class="text-left text-gray-500 mt-4 italic text-sm flex items-center">
+                    <svg class="w-4 mr-1 inline-block" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
+                        <path d="M453 776h60V536h-60v240Zm26.982-314q14.018 0 23.518-9.2T513 430q0-14.45-9.482-24.225-9.483-9.775-23.5-9.775-14.018 0-23.518 9.775T447 430q0 13.6 9.482 22.8 9.483 9.2 23.5 9.2Zm.284 514q-82.734 0-155.5-31.5t-127.266-86q-54.5-54.5-86-127.341Q80 658.319 80 575.5q0-82.819 31.5-155.659Q143 347 197.5 293t127.341-85.5Q397.681 176 480.5 176q82.819 0 155.659 31.5Q709 239 763 293t85.5 127Q880 493 880 575.734q0 82.734-31.5 155.5T763 858.316q-54 54.316-127 86Q563 976 480.266 976Zm.234-60Q622 916 721 816.5t99-241Q820 434 721.188 335 622.375 236 480 236q-141 0-240.5 98.812Q140 433.625 140 576q0 141 99.5 240.5t241 99.5Zm-.5-340Z" />
+                    </svg>
+                    Descuentos y ofertas disponibles durante el mes de junio 2023
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- La confianza genera más oportunidades -->
+    <div class="container mx-auto pt-12 md:pt-20 pb-12 scroll-reveal-fast">
+        <div class="mx-6 sm:mx-12 xl:grid grid-cols-3 gap-16">
+            <!-- Columna 1 -->
+            <div class="col-span-2">
+                <h3 class="uppercase text-3xl sm:text-4xl leading-normal sm:leading-relaxed 2xl:text-5xl oswald-font text-gray-800 mb-6 lg:mb-12"><span class="underline underline-offset-4 sm:underline-offset-8 decoration-pink-500 decoration-4 sm:decoration-8">La confianza</span> genera más oportunidades</h3>
+                <div class="text-gray-700 text-lg text-justify leading-8 text-xl 2xl:text-2xl 2xl:leading-10 font-light">
+                    <p class="">Seguro te ha pasado esto...
+                        Buscas una agencia que entienda tus ideas y te ayude a llegar a más clientes potenciales por un precio adecuado. Pero... ¿en quién se puede confiar en internet en estos tiempos? Es como ir a ciegas.<p>
+                            <p class="mt-7">Te aparecen anuncios en las redes sociales, cada vez la oferta es más baja pero empiezas a dudar de la calidad que te ofrecen. Otras agencias te parecen seguras y con experiencia, pero sus precios están muy por encima del promedio.</p>
+                            <p class="mt-7">¿Qué tal si tuvieras la oportunidad de realizar todo el proceso de diseño de tu web sin invertir un dólar, sin contratos y con los mejores precios del mercado. Simplemente colaborar en el desarrollo (como en cualquier proyecto serio) y luego tomar la decisión si pagar por el servicio? ¡Esa es nuestra garantía!</p>
+                </div>
+            </div>
+            <!-- Columna 2 -->
+            <div class="flex justify-center relative mt-12 xl:mt-0">
+                <div class="h-1/2 w-full bg-pink-300 absolute left-0"></div>
+                <div class="z-10 mt-8 px-8 aspect-w-16 aspect-h-9">
+                    <img src="https://images.pexels.com/photos/3153203/pexels-photo-3153203.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estamos siempre disponibles - 3 características -->
+    <div class="bg-gray-100 mt-24 py-24 scroll-reveal-fast">
+        <div class="mx-6 lg:mx-24 xl:px-24">
+            <h3 class="capitalize oswald-font text-4xl 2xl:text-5xl text-gray-800 text-center">¡Estamos siempre disponibles para ti!</h3>
+            <hr class="w-36 border-t-8 border-pink-500 mx-auto mt-4">
+        </div>
+        <div class="mx-6 lg:mx-24 xl:px-24 lg:grid grid-cols-3 mt-12 gap-6">
+            <div class="col-span-1 text-center">
+                <img class="mx-auto w-1/3 hover:scale-105 duration-300" src="assets/images/web-design.png" alt="">
+                <h4 class="oswald-font text-pink-400 uppercase text-2xl 2xl:text-3xl mt-4 mb-6">1. Diseño de Primer Nivel</h4>
+                <p class="text-lg 2xl:text-xl text-gray-600">Nuestros diseños son de primer nivel y trabajamos orientados a conseguir resultados. Cada sección de tu página web es elaborada cuidadosamente para destacar sus cualidades.</p>
+            </div>
+            <div class="col-span-1 text-center mt-8 lg:mt-0">
+                <img class="mx-auto w-1/3 hover:scale-105 duration-300" src="assets/images/feedback.png" alt="">
+                <h4 class="oswald-font text-pink-400 uppercase text-2xl 2xl:text-3xl mt-4 mb-6">2. Formulario & Redes Soc.</h4>
+                <p class="text-lg 2xl:text-xl text-gray-600">Tus visitantes tendrán diferentes formas de comunicación como formularios de correo electrónico, botones para mensaje a Whatsapp, enlaces a redes sociales y número de contacto.</p>
+            </div>
+            <div class="col-span-1 text-center mt-8 lg:mt-0">
+                <img class="mx-auto w-1/3 hover:scale-105 duration-300" src="assets/images/touch.png" alt="">
+                <h4 class="oswald-font text-pink-400 uppercase text-2xl 2xl:text-3xl mt-4 mb-6">3. Contenido Administrable</h4>
+                <p class="text-lg 2xl:text-xl text-gray-600">Recibes acceso un panel administrativo donde podrás iniciar sesión y, después de una breve capacitación (que no requiere conocimientos previos), podrás editar fácilmente todo el contenido.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="bg-zinc-800 text-white px-6 sm:px-12 py-24">
+        <div class="container mx-auto max-w-screen-lg text-center scroll-reveal-fast">
+            <h3 class="text-4xl sm:text-5xl 2xl:text-6xl oswald-font capitalize">Aquí comienzan</h3>
+            <h3 class="text-4xl sm:text-5xl 2xl:text-6xl oswald-font capitalize sm:mt-4">Las nuevas oportunidades</h3>
+            <hr class="w-36 border-t-8 border-pink-500 mx-auto my-12">
+        </div>
+        <div class="max-w-screen-lg mx-auto text-lg text-center">
+            <p>Cientos de empresas y dueños de negocio confiaron en nosotros a lo largo de más de 10 años en el desarrollo web.</p>
+            <p>Si estás preparado para iniciar, solo tienes que iniciar tu registro aquí.</p>
+        </div>
+        <div class="max-w-screen-lg mx-auto scroll-reveal-fast">
+            <form class="mt-12">
+                <div class="md:flex">
+                    <input required class="shadow appearance-none border rounded w-full h-16 py-2 px-3 text-gray-700 text-xl leading-tight focus:outline-none focus:shadow-outline qsand-font" type="email" placeholder="Tu correo electrónico principal">
+                    <button type="submit" class="bg-pink-500 hover:bg-pink-700 w-full md:w-64 h-16 mt-4 md:mt-0 text-white font-bold py-2 px-4 rounded uppercase md:ml-6 oswald-font text-xl">
+                        Iniciar ya
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Testimonios -->
+    <div class="mx-auto flex flex-col md:flex-row shadow-sm overflow-hidden bg-gray-100 scroll-reveal-fast" x-data="{ testimonialActive: 2 }" x-cloak>
+		<div class="relative w-full py-6 sm:py-12 md:py-24 bg-pink-500 md:w-1/2 flex flex-col item-center justify-center">
+			
+			<div class="absolute top-0 left-0 z-10 grid-indigo w-16 h-16 md:w-40 md:h-40 md:ml-20 md:mt-24"></div>
+			
+			<div class="relative text-4xl md:text-5xl py-2 px-6 sm:px-12 md:py-6 md:px-1 md:w-64 md:mx-auto text-white font-semibold leading-tight tracking-tight mb-0 z-20 oswald-font">
+				<span class="md:block mb-2">Qué dicen</span>
+				<span class="md:block">Nuestros</span>
+				<span class="md:block mt-2">Clientes</span>
 			</div>
 
-			<!-- Columna 2 -->
-			<div class="scroll-reveal-slow lg:col-span-5 xl:col-span-1 lg:flex lg:items-end">
-				<div class="sm:-mb-12 flex justify-center max-w-xs mx-auto sm:max-w-none">
-					<img class="sm:max-w-xl lg:max-w-full 2xl:max-w-2xl" src="assets/images/dev.png" alt="">
-				</div>
+			<div class="absolute right-0 bottom-0 mr-4 mb-4 hidden md:block">
+				<button 
+					class="rounded-l-full border-r bg-gray-100 text-gray-500 focus:outline-none hover:text-indigo-500 font-bold w-12 h-10"
+					x-on:click="testimonialActive = testimonialActive === 1 ? 3 : testimonialActive - 1">
+					&#8592;
+				</button><button 
+					class="rounded-r-full bg-gray-100 text-gray-500 focus:outline-none hover:text-indigo-500 font-bold w-12 h-10"
+					x-on:click="testimonialActive = testimonialActive >= 3 ? 1 : testimonialActive + 1">
+					&#8594;
+				  </button>
 			</div>
 		</div>
-	</header>
 
-	<!-- Formulario -->
-	<div class="container mt-8 sm:mt-12 text-center mx-auto">
-		<div class="sm:border sm:shadow mx-4 lg:mx-10 xl:mx-24 2xl:mx-6 sm:py-12 sm:px-4">
-			<p class="oswald-font text-2xl sm:text-4xl 2xl:text-5xl leading-normal sm:leading-snug lg:leading-relaxed 2xl:leading-tight uppercase font-bold text-gray-800">
-				Si estás listo para iniciar tu proyecto web, regístrate aquí y comienza <span class="underline underline-offset-4 xl:underline-offset-8 decoration-pink-500 decoration-4 md:decoration-8">hoy mismo</span> a tener presencia en internet
-			</p>
+		<div class="bg-gray-100 md:w-1/2 py-6 sm:py-12">
+			<div class="flex flex-col h-full relative">
 
-			<form class="mt-5 sm:mt-12">
-				<div class="lg:flex">
-					<input required class="shadow appearance-none border rounded w-full h-16 py-2 px-3 text-gray-700 text-xl leading-tight focus:outline-none focus:shadow-outline qsand-font" type="email" placeholder="Tu correo electrónico principal">
-					<button type="submit" class="bg-pink-500 hover:bg-pink-700 w-full lg:w-64 h-16 mt-4 lg:mt-0 text-white font-bold py-2 px-4 rounded uppercase lg:ml-6 oswald-font text-xl">
-						Iniciar ya
-					</button>
+				<div class="absolute top-0 left-0 mt-3 ml-4 md:mt-5 md:ml-12">
+					<svg xmlns="http://www.w3.org/2000/svg" class="text-pink-200 fill-current w-12 h-12 md:w-16 md:h-16" viewBox="0 0 24 24"><path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758 4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562 5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778 2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015 4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758 4.03c0 0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0 4.5-2.015 4.5-4.5S19.985 10 17.5 10z"/></svg>
 				</div>
-				<p class="text-left text-gray-500 mt-4 italic text-sm flex items-center">
-					<svg class="w-4 mr-1 inline-block" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
-						<path d="M453 776h60V536h-60v240Zm26.982-314q14.018 0 23.518-9.2T513 430q0-14.45-9.482-24.225-9.483-9.775-23.5-9.775-14.018 0-23.518 9.775T447 430q0 13.6 9.482 22.8 9.483 9.2 23.5 9.2Zm.284 514q-82.734 0-155.5-31.5t-127.266-86q-54.5-54.5-86-127.341Q80 658.319 80 575.5q0-82.819 31.5-155.659Q143 347 197.5 293t127.341-85.5Q397.681 176 480.5 176q82.819 0 155.659 31.5Q709 239 763 293t85.5 127Q880 493 880 575.734q0 82.734-31.5 155.5T763 858.316q-54 54.316-127 86Q563 976 480.266 976Zm.234-60Q622 916 721 816.5t99-241Q820 434 721.188 335 622.375 236 480 236q-141 0-240.5 98.812Q140 433.625 140 576q0 141 99.5 240.5t241 99.5Zm-.5-340Z"/>
-					</svg>
-					Descuentos y ofertas disponibles durante el mes de junio 2023
-				</p>
-			</form>
-		</div>		
-	</div>
-
-	<!-- La confianza genera más oportunidades -->
-	<div class="container mx-auto pt-12 md:pt-20 pb-12 scroll-reveal-slow">
-		<div class="mx-6 sm:mx-12 xl:grid grid-cols-3 gap-16">
-			<!-- Columna 1 -->
-			<div class="col-span-2">
-				<h3 class="uppercase text-3xl sm:text-4xl leading-normal sm:leading-relaxed 2xl:text-5xl oswald-font text-gray-800 mb-6 lg:mb-12"><span class="underline underline-offset-4 sm:underline-offset-8 decoration-pink-500 decoration-4 sm:decoration-8">La confianza</span> genera más oportunidades</h3>
-
-				<div class="text-gray-700 text-lg text-justify leading-8 text-xl 2xl:text-2xl 2xl:leading-10 font-light">
-					<p class="">Seguro te ha pasado esto...
-					Buscas una agencia que entienda tus ideas y te ayude a llegar a más clientes potenciales por un precio adecuado. Pero... ¿en quién se puede confiar en internet en estos tiempos? Es como ir a ciegas.<p>
-
-					<p class="mt-7">Te aparecen anuncios en las redes sociales, cada vez la oferta es más baja pero empiezas a dudar de la calidad que te ofrecen. Otras agencias te parecen seguras y con experiencia, pero sus precios están muy por encima del promedio.</p>
+				 
+				<div class="h-full relative z-10">
+					<div x-show.immediate="testimonialActive === 1">
+						<p class="text-gray-600 qsand-font font-normal italic px-6 sm:px-12 py-6 md:px-16 md:py-10 text-xl md:text-2xl" x-show.transition="testimonialActive == 1">
+							La colaboración del equipo de Dev Sam fue clave en la presentación final de nuestra plataforma de blogs e inscripciones. Necesitábamos la ayuda de implementadores profesionales en CMS.
+						</p>
+					</div>
 					
-					<p class="mt-7">¿Qué tal si tuvieras la oportunidad de realizar todo el proceso de diseño de tu web sin invertir un dólar, sin contratos y con los mejores precios del mercado. Simplemente colaborar en el desarrollo (como en cualquier proyecto serio) y luego tomar la decisión si pagar por el servicio? ¡Esa es nuestra garantía!</p>
+					<div x-show.immediate="testimonialActive === 2">
+						<p class="text-gray-600 qsand-font font-normal italic px-6 sm:px-12 py-6 md:px-16 md:py-10 text-xl md:text-2xl" x-show.transition="testimonialActive == 2">
+							Pude hacer realidad mi proyecto de Aula Virtual para mis alumnos de guitarra Andina y Criolla. Desarrollaron perfectamente todos los requisitos que buscaba para mi plataforma de estudio.
+						</p>
+					</div>
+					
+					<div x-show.immediate="testimonialActive === 3"> 
+						<p class="text-gray-600 qsand-font font-normal italic px-6 sm:px-12 py-6 md:px-16 md:py-10 text-xl md:text-2xl" x-show.transition="testimonialActive == 3">
+							Estamos trabajando mi sitio web corporativo donde expongo mis servicios como maestro de ajedrez en toda habla hispana. El diseño y la programación son de primer nivel y están superando mis expectativas.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex my-4 justify-center items-center">
+					<button 
+						@click.prevent="testimonialActive = 1" 
+						class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline inline-block rounded-full mx-2"
+						:class="{'h-12 w-12 opacity-25 bg-pink-200 text-gray-600': testimonialActive != 1, 'h-16 w-16 opacity-100 bg-pink-500 text-white': testimonialActive == 1 }"	
+					>UN</button>
+					<button 
+						@click.prevent="testimonialActive = 2" 
+						class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline h-16 w-16 inline-block bg-pink-500 rounded-full mx-2"
+						:class="{'h-12 w-12 opacity-25 bg-pink-200 text-gray-600': testimonialActive != 2, 'h-16 w-16 opacity-100 bg-pink-500 text-white': testimonialActive == 2 }"	
+					>RO</button>
+					<button 
+						@click.prevent="testimonialActive = 3" 
+						class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline h-12 w-12 inline-block bg-pink-500 rounded-full mx-2"
+						:class="{'h-12 w-12 opacity-25 bg-pink-200 text-gray-600': testimonialActive != 3, 'h-16 w-16 opacity-100 bg-pink-500 text-white': testimonialActive == 3 }"
+					>JC</button>
+				</div>
+				 
+				<div class="flex justify-center px-6 pt-2 pb-6 md:py-6">
+					<div class="text-center" x-show="testimonialActive == 1">
+						<h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight">UNM</h2>
+						<small class="text-gray-500 text-xs md:text-sm truncate">Universidad Nacional de Música</small>
+					</div>
+
+					<div class="text-center" x-show="testimonialActive == 2">
+						<h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight">Riber Oré</h2>
+						<small class="text-gray-500 text-xs md:text-sm truncate">Concertista Internacional de Guitarra Acústica</small>
+					</div>
+
+					<div class="text-center" x-show="testimonialActive == 3">
+						<h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight">GM Jorge Cori</h2>
+						<small class="text-gray-500 text-xs md:text-sm truncate">Ajedrecista Profesional #1 en Sudamérica</small>
+					</div>	 
 				</div>
 			</div>
-
-			<!-- Columna 2 -->
-			<div class="flex justify-center relative mt-12 xl:mt-0">
-				<div class="h-1/2 w-full bg-pink-300 absolute left-0"></div>
-				<div class="z-10 mt-8 px-8 aspect-w-16 aspect-h-9">					
-					<img src="https://images.pexels.com/photos/3153203/pexels-photo-3153203.jpeg" alt="">
-				</div>
-			</div>
 		</div>
 	</div>
 
-	<!-- Estamos siempre disponibles - 3 características -->
-	<div class="bg-gray-100 mt-24 py-24 scroll-reveal-slow">
-		<div class="mx-6 lg:mx-24 xl:px-24">
-			<h3 class="capitalize oswald-font text-4xl 2xl:text-5xl text-gray-800 text-center">¡Estamos siempre disponibles para ti!</h3>
-			<hr class="w-36 border-t-8 border-pink-500 mx-auto mt-4">
-		</div>
+    <!-- Footer -->
+    <div class="py-12 px-6 lg:px-24 bg-zinc-800">
+        <div class="md:flex justify-between items-center xl:px-24">
+            <div class="text-center oswald-font">
+                <p class="uppercase text-white text-3xl tracking-widest">Dev Sam</p>
+            </div>
+            <div class="text-white text-center md:text-right mt-6 md:mt-0 qsand-font">
+                <a target="_blank" class="text-pink-500 hover:text-pink-400" href="#">www.dev-sam.com</a>
+                <p>Copyright 2023 - Desarrollo de sitios web profesionales</p>
+            </div>
+        </div>
+    </div>
 
-		<div class="mx-6 lg:mx-24 xl:px-24 lg:grid grid-cols-3 mt-12 gap-6">
-			<div class="col-span-1 text-center">
-				<img class="mx-auto w-1/3 hover:scale-105 duration-300" src="assets/images/web-design.png" alt="">
-				<h4 class="oswald-font text-pink-400 uppercase text-2xl 2xl:text-3xl mt-4 mb-6">1. Diseño de Primer Nivel</h4>
-				<p class="text-lg 2xl:text-xl text-gray-600">Nuestros diseños son de primer nivel y trabajamos orientados a conseguir resultados. Cada sección de tu página web es elaborada cuidadosamente para destacar sus cualidades.</p>
-			</div>
-			<div class="col-span-1 text-center mt-8 lg:mt-0">
-				<img class="mx-auto w-1/3 hover:scale-105 duration-300" src="assets/images/feedback.png" alt="">
-				<h4 class="oswald-font text-pink-400 uppercase text-2xl 2xl:text-3xl mt-4 mb-6">2. Formulario & Redes Soc.</h4>
-				<p class="text-lg 2xl:text-xl text-gray-600">Tus visitantes tendrán diferentes formas de comunicación como formularios de correo electrónico, botones para mensaje a Whatsapp, enlaces a redes sociales y número de contacto.</p>
-			</div>
-			<div class="col-span-1 text-center mt-8 lg:mt-0">
-				<img class="mx-auto w-1/3 hover:scale-105 duration-300" src="assets/images/touch.png" alt="">
-				<h4 class="oswald-font text-pink-400 uppercase text-2xl 2xl:text-3xl mt-4 mb-6">3. Contenido Administrable</h4>
-				<p class="text-lg 2xl:text-xl text-gray-600">Recibes acceso un panel administrativo donde podrás iniciar sesión y, después de una breve capacitación (que no requiere conocimientos previos), podrás editar fácilmente todo el contenido.</p>
-			</div>
-		</div>
-	</div>
-
-	<!-- Formulario -->
-	<div class="bg-zinc-800 text-white px-6 sm:px-12 py-24">
-		<div class="container mx-auto max-w-screen-lg text-center scroll-reveal-slow">
-			<h3 class="text-4xl sm:text-5xl 2xl:text-6xl oswald-font capitalize">Aquí comienzan</h3>
-			<h3 class="text-4xl sm:text-5xl 2xl:text-6xl oswald-font capitalize mt-4">Las nuevas oportunidades</h3>
-			<hr class="w-36 border-t-8 border-pink-500 mx-auto my-12">
-		</div>
-
-		<div class="max-w-screen-lg mx-auto text-lg text-center">
-			<p>Cientos de empresas y dueños de negocio confiaron en nosotros a lo largo de más de 10 años en el desarrollo web.</p>
-			<p>Si estás preparado para iniciar, solo tienes que iniciar tu registro aquí.</p>			
-		</div>
-
-		<div class="max-w-screen-lg mx-auto scroll-reveal-fast">
-			<form class="mt-12">
-				<div class="md:flex">
-					<input required class="shadow appearance-none border rounded w-full h-16 py-2 px-3 text-gray-700 text-xl leading-tight focus:outline-none focus:shadow-outline qsand-font" type="email" placeholder="Tu correo electrónico principal">
-					<button type="submit" class="bg-pink-500 hover:bg-pink-700 w-full md:w-64 h-16 mt-4 md:mt-0 text-white font-bold py-2 px-4 rounded uppercase md:ml-6 oswald-font text-xl">
-						Iniciar ya
-					</button>
-				</div>
-			</form>
-		</div>
-	</div>
-
-	<!-- Footer -->
-	<div class="py-12 px-6 lg:px-24 bg-gray-100">
-		<div class="md:flex justify-between items-center xl:px-24">
-			<div class="text-center">
-				<p class="uppercase text-gray-600 text-3xl tracking-widest">Dev Sam</p>				
-			</div>
-			<div class="text-gray-600 text-center md:text-right mt-6 md:mt-0">
-				<a target="_blank" class="text-pink-500 hover:text-pink-400" href="#">www.dev-sam.com</a>
-				<p>Copyright 2023 - Desarrollo de sitios web profesionales</p>
-			</div>
-		</div>
-	</div>
-
-	<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
